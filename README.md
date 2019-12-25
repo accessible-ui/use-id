@@ -52,7 +52,7 @@ A hook that returns a unique, but deterministic ID once per component
 
 | Argument   | Type                                                     | Default     | Required? | Description                                     |
 | ---------- | -------------------------------------------------------- | ----------- | --------- | ----------------------------------------------- |
-| fallbackId | <code>string &#0124; null &#0124; 0 &#0124; false</code> | `undefined` | Yes       | Allows you to provide your own id as a fallback |
+| fallbackId | <code>string &#0124; null &#0124; 0 &#0124; false</code> | `undefined` | No        | Allows you to provide your own id as a fallback |
 
 ## Credit
 
