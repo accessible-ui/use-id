@@ -1,16 +1,20 @@
 {
   "name": "@accessible/use-id",
   "version": "1.0.0",
-  "homepage": "https://github.com/accessible-ui/accessible#readme",
-  "repository": "github:accessible-ui/accessible",
-  "bugs": "https://github.com/accessible-ui/accessible/issues",
+  "homepage": "https://github.com/accessible-ui/use-id#readme",
+  "repository": "github:accessible-ui/use-id",
+  "bugs": "https://github.com/accessible-ui/use-id/issues",
   "author": "Jared Lunde <jared@BeStellar.co> (https://jaredLunde.com)",
   "license": "MIT",
-  "description": "",
+  "description": "Creates unique IDs to facilitate WAI-ARIA and server rendering",
   "keywords": [
     "react",
     "react component",
-    "use id"
+    "use id",
+    "auto id",
+    "id hook",
+    "unique id",
+    "unique id hook"
   ],
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -74,7 +78,9 @@
     "ts-jest": "latest",
     "typescript": "latest"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@react-hook/passive-layout-effect": "^1.0.2"
+  },
   "peerDependencies": {
     "prop-types": ">=15.6",
     "react": ">=16.8",
