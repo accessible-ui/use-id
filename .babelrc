@@ -16,6 +16,7 @@
   "plugins": ["optimize-react", "typescript-to-proptypes"],
   "env": {
     "es": {
+      "plugins": ["optimize-react", "typescript-to-proptypes"],
       "presets": [
         [
           "@lunde/es",
