@@ -3,15 +3,18 @@ import useLayoutEffect from '@react-hook/passive-layout-effect'
 
 let serverHandoffComplete = false
 let id = 0
-const genId = (): string => `${id++}`
+const genId = (): number => id++
 
-const useId = (fallbackId?: string | null | 0 | false): string | undefined => {
+const useId = (
+  fallbackId?: string | null | 0 | false,
+  prefix = '🅰'
+): string | undefined => {
   /*
    * If this instance isn't part of the initial render, we don't have to do the
    * double render/patch-up dance. We can just generate the ID and return it.
    */
-  const initialId = fallbackId || (serverHandoffComplete ? genId : void 0)
-  const [id, setId] = useState<string | undefined>(initialId)
+  const initialId = serverHandoffComplete ? genId : void 0
+  const [id, setId] = useState<number | undefined>(initialId)
 
   useLayoutEffect(() => {
     if (id === void 0) {
@@ -36,7 +39,7 @@ const useId = (fallbackId?: string | null | 0 | false): string | undefined => {
     }
   }, [])
 
-  return id
+  return fallbackId ? fallbackId : prefix + id
 }
 
 export default useId

@@ -38,21 +38,23 @@ import useId from '@accessible/use-id'
 
 const Component = () => {
   const id = useId()
-  return <div id={`popover--${id}`} />
+  return <div id={id} />
+  // <div id='A:1'>
 }
 ```
 
 ## API
 
-### useId(fallbackId?: string | null | 0 | false): string | undefined
+### useId(fallbackId?: string | null | 0 | false, prefix?: string): string | undefined
 
 A hook that returns a unique, but deterministic ID once per component
 
 ### Arguments
 
-| Argument   | Type                                                     | Default     | Required? | Description                                     |
-| ---------- | -------------------------------------------------------- | ----------- | --------- | ----------------------------------------------- |
-| fallbackId | <code>string &#0124; null &#0124; 0 &#0124; false</code> | `undefined` | No        | Allows you to provide your own id as a fallback |
+| Argument   | Type                                                     | Default     | Required? | Description                                                                               |
+| ---------- | -------------------------------------------------------- | ----------- | --------- | ----------------------------------------------------------------------------------------- |
+| fallbackId | <code>string &#0124; null &#0124; 0 &#0124; false</code> | `undefined` | No        | Allows you to provide your own id as a fallback                                           |
+| prefix     | `string`                                                 | `🅰`         | No        | Allows you to provide a prefix for the `id` to prevent collisions with other auto id libs |
 
 ## Credit
 
