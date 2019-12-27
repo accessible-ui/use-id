@@ -39,7 +39,7 @@ const useId = (
     }
   }, [])
 
-  return fallbackId ? fallbackId : prefix + id
+  return fallbackId ? fallbackId : id === void 0 ? id : prefix + id
 }
 
 export default useId
