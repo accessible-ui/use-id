@@ -14,10 +14,11 @@ const useId = (
   )
 
   useLayoutEffect(() => {
-    if (!serverHandoffComplete) {
-      serverHandoffComplete = true
+    if (id === void 0) {
       setId(ID++)
     }
+
+    serverHandoffComplete = true
   }, [])
 
   return fallbackId ? fallbackId : id === void 0 ? id : prefix + id
